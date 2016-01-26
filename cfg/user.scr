@@ -1,0 +1,142 @@
+// NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
+//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+// User options script
+//
+// Format:
+//  Version [float]
+//  Options description followed by 
+//  Options defaults
+//
+// Option description syntax:
+//
+//  "cvar" { "Prompt" { type [ type info ] } { default } }
+//
+//  type = 
+//   BOOL   (a yes/no toggle)
+//   STRING
+//   NUMBER
+//   LIST
+//
+// type info:
+// BOOL                 no type info
+// NUMBER       min max range, use -1 -1 for no limits
+// STRING       no type info
+// LIST          delimited list of options value pairs
+//
+//
+// default depends on type
+// BOOL is "0" or "1"
+// NUMBER is "value"
+// STRING is "value"
+// LIST is "index", where index "0" is the first element of the list
+
+
+// Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
+// File generated:  Mon Jan 11 05:50:43 AM
+//
+//
+// Cvar	-	Setting
+
+VERSION 1.0
+
+DESCRIPTION INFO_OPTIONS
+{
+	"category7"
+	{
+		"EntranceJew's Private Stash"
+		{ CATEGORY }
+	}
+	
+	"echo gfx_or_cinema; exec"
+	{
+		"FPS Config Switch"
+		"gfx will make things fast, cinema will make things pretty"
+		{
+			LIST
+			"gfx" "gfx.cfg"
+			"cinema" "cinema.cfg"
+		}
+		{ "0" }
+	}
+
+	"echo gfx_net; exec"
+	{
+		"Net Settings"
+		"Do not pick comp unless you know you are in a really good server."
+		{
+			LIST
+			"Comp" "gfx_net_comp.cfg"
+			"Good" "gfx_net_good.cfg"
+			"Bad" "gfx_net_bad.cfg"
+		}
+		{ "1" }
+	}
+
+	"echo gfx_sprays; exec"
+	{
+		"Sprays"
+		"Tired of 'em? Ditch 'em."
+		{
+			LIST
+			"On" "gfx_sprays_on.cfg"
+			"Off" "gfx_sprays_off.cfg"
+		}
+		{ "0" }
+	}
+
+	"echo gfx_shadows; exec"
+	{
+		"Shadows"
+		"If off, you won't be able to see opponents standing too close to thin walls."
+		{
+			LIST
+			"On" "gfx_shadows_on.cfg"
+			"Off" "gfx_shadows_off.cfg"
+		}
+		{ "0" }
+	}
+
+	"echo gfx_faces; exec"
+	{
+		"Facial Features"
+		"Turn player models into scary featureless husks."
+		{
+			LIST
+			"On" "gfx_faces_on.cfg"
+			"Off" "gfx_faces_off.cfg"
+		}
+		{ "0" }
+	}
+
+	"echo gfx_ragdolls; exec"
+	{
+		"Ragdolls"
+		"Don't get slowed down by ragdolling someone."
+		{
+			LIST
+			"On" "gfx_ragdolls_on.cfg"
+			"Off" "gfx_ragdolls_off.cfg"
+		}
+		{ "0" }
+	}
+
+	"echo gfx_gibs; exec"
+	{
+		"Gibs"
+		"People chunks. Very expensive, Douglas."
+		{
+			LIST
+			"On" "gfx_gibs_on.cfg"
+			"Off" "gfx_gibs_off.cfg"
+		}
+		{ "0" }
+	}
+
+	"mat_antialias"
+	{
+		"Material Anti-Alias"
+		"Having this set to ON in a config can sometimes break the mumble overlay. Disable to solve."
+		{ BOOL }
+		{ "1" }
+	}
+}
